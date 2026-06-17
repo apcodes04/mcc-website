@@ -6,6 +6,19 @@ export default function MobileContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const mobile = formData.get('mobile');
+    const propertyType = formData.get('propertyType');
+    const budget = formData.get('budget');
+    const message = formData.get('message');
+
+    const text = `*New Proposal Request!*%0A%0A*Name:* ${name}%0A*Mobile:* ${mobile}%0A*Property Type:* ${propertyType}%0A*Budget:* ${budget}%0A%0A*Message:*%0A${message}`;
+    
+    const phone = "919967313495";
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+
     setSubmitted(true);
   };
 
@@ -61,8 +74,18 @@ export default function MobileContact() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Name <span className="text-red-500">*</span></label>
+                <input name="name" type="text" required placeholder="Your full name" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none" />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-1">Mobile Number <span className="text-red-500">*</span></label>
+                <input name="mobile" type="tel" required placeholder="Your mobile number" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none" />
+              </div>
+
+              <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Property Type</label>
-                <select className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none">
+                <select name="propertyType" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none">
                   <option>Single family home</option>
                   <option>Townhome</option>
                   <option>Commercial</option>
@@ -73,7 +96,7 @@ export default function MobileContact() {
               
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Budget (Rupees)</label>
-                <select className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none">
+                <select name="budget" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none">
                   <option>Less than ₹50 Lakhs</option>
                   <option>₹50 Lakhs to ₹1 Crore</option>
                   <option>₹1 Crore to ₹5 Crores</option>
@@ -84,6 +107,7 @@ export default function MobileContact() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1">Message</label>
                 <textarea 
+                  name="message"
                   rows="4" 
                   className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-[#C8A97E] outline-none resize-none"
                   defaultValue="Hello, I am interested in working together. Please review my request."

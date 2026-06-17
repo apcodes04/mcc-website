@@ -6,6 +6,19 @@ export default function DesktopContact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const mobile = formData.get('mobile');
+    const propertyType = formData.get('propertyType');
+    const budget = formData.get('budget');
+    const message = formData.get('message');
+
+    const text = `*New Proposal Request!*%0A%0A*Name:* ${name}%0A*Mobile:* ${mobile}%0A*Property Type:* ${propertyType}%0A*Budget:* ${budget}%0A%0A*Message:*%0A${message}`;
+    
+    const phone = "919967313495";
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+
     setSubmitted(true);
   };
 
@@ -64,8 +77,18 @@ export default function DesktopContact() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Name <span className="text-red-500">*</span></label>
+                <input name="name" type="text" required placeholder="Your full name" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition" />
+              </div>
+
+              <div>
+                <label className="block text-sm font-semibold text-gray-700 mb-2">Mobile Number <span className="text-red-500">*</span></label>
+                <input name="mobile" type="tel" required placeholder="Your mobile number" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition" />
+              </div>
+
+              <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">What kind of property?</label>
-                <select className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition">
+                <select name="propertyType" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition">
                   <option>Single family home</option>
                   <option>Townhome</option>
                   <option>Condominium</option>
@@ -77,7 +100,7 @@ export default function DesktopContact() {
               
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Estimated Budget (in Rupees)</label>
-                <select className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition">
+                <select name="budget" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition">
                   <option>Less than ₹50 Lakhs</option>
                   <option>₹50 Lakhs to ₹1 Crore</option>
                   <option>₹1 Crore to ₹2 Crores</option>
@@ -89,6 +112,7 @@ export default function DesktopContact() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message</label>
                 <textarea 
+                  name="message"
                   rows="4" 
                   className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-[#C8A97E] outline-none transition resize-none"
                   defaultValue="Hello Mahindra Construction Company,&#10;&#10;I found your Service Page and I am interested in working together. Please review my project request and submit a proposal if it’s a good fit for you.&#10;&#10;Looking forward to learning more about your work."
