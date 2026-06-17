@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mcc-brown: #8B5E34;
+  --color-mcc-dark: #3E2723;
+  --color-mcc-gold: #C49A45;
+  --color-mcc-light: #FDFBF7;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-mcc-light);
+    color: #1f2937;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
