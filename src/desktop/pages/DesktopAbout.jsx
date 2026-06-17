@@ -21,7 +21,7 @@ export default function DesktopAbout() {
           </div>
         </div>
         <div className="flex-1 pt-4">
-          <h2 className="text-3xl font-bold text-[#6B5B4E] mb-6">Building Since 2005</h2>
+          <h2 className="text-3xl font-bold uppercase text-[#6B5B4E] mb-6">BUILDING SINCE 2005</h2>
           <p className="text-gray-700 leading-relaxed mb-6">
             Mahindra Construction Company is an engineer-led civil contracting firm specializing in residential construction projects across Navi Mumbai and Mumbai regions.
           </p>

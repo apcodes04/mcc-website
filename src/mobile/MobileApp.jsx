@@ -49,9 +49,9 @@ export default function MobileApp() {
 
       {/* Mobile Footer */}
       <footer className="bg-[#1E1A18] text-white py-10 px-6 text-center flex flex-col items-center">
-        <div className="bg-[#FAF6F0] rounded-lg p-3 mb-8 shadow-sm">
-          <img src="/images/mcclogo.jpg" alt="Logo" className="h-20 mx-auto object-contain" />
-          <p className="text-[#6B5B4E] text-[10px] font-bold mt-2 tracking-wide">Building Strength. Delivering Trust.</p>
+        <div className="bg-[#FAF6F0] rounded-lg p-3 mb-8 shadow-sm inline-flex flex-col items-center">
+          <img src="/images/mcclogo.jpg" alt="Logo" className="h-20 object-contain" />
+          <p className="text-[#6B5B4E] text-[10px] font-bold text-center mt-2 tracking-wide">Building Strength. Delivering Trust.</p>
         </div>
         
         <div className="flex flex-col gap-4 text-sm mb-8 w-full max-w-sm">

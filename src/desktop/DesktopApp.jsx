@@ -45,7 +45,7 @@ export default function DesktopApp() {
       <footer className="bg-[#1E1A18] text-white py-12 px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8">
           <div>
-            <div className="bg-[#FAF6F0] rounded-lg p-4 inline-block mb-6 shadow-sm">
+            <div className="bg-[#FAF6F0] rounded-lg p-4 inline-flex flex-col items-center mb-6 shadow-sm">
               <img src="/images/mcclogo.jpg" alt="Logo" className="h-28 object-contain" />
               <p className="text-[#6B5B4E] text-xs font-bold text-center mt-2 tracking-wide">Building Strength. Delivering Trust.</p>
             </div>

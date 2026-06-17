@@ -18,8 +18,9 @@ export default function MobileAbout() {
             “Engineered for strength.<br/>Executed with discipline.<br/>Delivered with integrity.”
           </p>
         </div>
-
-        <h2 className="text-2xl font-bold text-[#6B5B4E] mb-4 text-center">Building Since 2005</h2>
+        <div className="pt-4">
+          <h2 className="text-2xl font-bold uppercase text-[#6B5B4E] mb-4 text-center">BUILDING SINCE 2005</h2>
+        </div>
         <p className="text-gray-700 leading-relaxed mb-4 text-center">
           Mahindra Construction Company is an engineer-led civil contracting firm specializing in residential construction projects across Navi Mumbai and Mumbai regions.
         </p>
