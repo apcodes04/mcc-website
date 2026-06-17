@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-mcc-brown: #8B5E34;
-  --color-mcc-dark: #3E2723;
-  --color-mcc-gold: #C49A45;
-  --color-mcc-light: #FDFBF7;
+  --color-mcc-brown: #6B5B4E;
+  --color-mcc-dark: #1E1A18;
+  --color-mcc-gold: #C8A97E;
+  --color-mcc-light: #FAF6F0;
   --font-sans: 'Inter', system-ui, sans-serif;
 }
 
