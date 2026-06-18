@@ -23,7 +23,10 @@ export default function MobileHome() {
       {/* Mobile Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/60 z-10" />
-        <img src="/images/1.jpg" alt="Construction Site" className="absolute inset-0 w-full h-full object-cover" />
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/banner.mp4" type="video/mp4" />
+          <img src="/images/1.jpg" alt="Construction Site" className="absolute inset-0 w-full h-full object-cover" />
+        </video>
         <div className="relative z-20 text-center text-white px-6 w-full">
           <h1 className="text-4xl font-bold mb-4 drop-shadow-lg">Building Strength,<br/><span className="text-[#C8A97E]">Delivering Trust</span></h1>
           <p className="text-lg mb-8 font-light drop-shadow-md text-gray-200">Over 20 years of excellence in civil construction.</p>

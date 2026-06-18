@@ -23,7 +23,10 @@ export default function DesktopHome() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50 z-10" />
-        <img src="/images/1.jpg" alt="Construction Site" className="absolute inset-0 w-full h-full object-cover" />
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/banner.mp4" type="video/mp4" />
+          <img src="/images/1.jpg" alt="Construction Site" className="absolute inset-0 w-full h-full object-cover" />
+        </video>
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
           <h1 className="text-6xl font-bold mb-6 drop-shadow-lg">Building Strength,<br/><span className="text-[#C8A97E]">Delivering Trust</span></h1>
           <p className="text-xl mb-8 font-light drop-shadow-md">Over 20 years of excellence in civil construction, specializing in residential and turnkey projects across Navi Mumbai.</p>
