@@ -24,7 +24,7 @@ export default function MobileHome() {
       <section className="relative h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/videos/banner.mp4" type="video/mp4" />
+          <source src="/videos/bannermobile.mp4" type="video/mp4" />
           <img src="/images/1.jpg" alt="Construction Site" className="absolute inset-0 w-full h-full object-cover" />
         </video>
         <div className="relative z-20 text-center text-white px-6 w-full">
